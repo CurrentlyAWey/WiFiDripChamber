@@ -1,0 +1,54 @@
+/*
+void setup() {
+    Spark.function('dripstatus', driptrue);
+    
+    pinMode(contIn, INPUT);
+    pinMode(breakIn, INPUT);
+    
+    
+    
+}
+
+
+void loop() {
+    noInterrupts();
+        //monitor
+        
+    Interrupts();
+        attachInterrupt(D1, driptrue, RISING);
+    
+    
+    
+
+}
+
+
+int driptrue(){
+    drop = digitalRead(A0);
+    //record a drip until the interrupt ends
+    
+}
+*/
+
+
+
+
+/*
+
+bool dropComplete = meter(D0); //meter measures the current in the circuit and evaluates as true when the current is "HIGH" 
+                                  // attachInterrupt(D0, fxn(), RISING)
+
+
+
+setTImer (5ms) //loop every 5 ms
+{
+    if (dropComplete == true)
+    {
+        while (dropComplete == true)    //dropComplete is true when the drop is in between the probes, completing the circuit.
+        {
+            //UPLOAD SHIT TO THE CLOOOOUD;
+        }
+    }
+
+
+*/

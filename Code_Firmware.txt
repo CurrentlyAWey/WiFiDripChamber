@@ -1,4 +1,36 @@
+// Testing compiler; this program SHOULD compile as blinker, and just have our program behind it as a block comment
+// HOWEVER It doesn't compile properly when we add COMMENTS.
+
+//Thanks based Spark
+
+
+// Define the pins we're going to call pinMode on
+int led = D0;  // You'll need to wire an LED to this one to see it blink.
+
+// This routine runs only once upon reset
+void setup() {
+  // Initialize D0 + D7 pin as output
+  // It's important you do this here, inside the setup() function rather than outside it or in the loop function.
+  pinMode(led, OUTPUT);
+  
+}
+
+// This routine gets called repeatedly, like once every 5-15 milliseconds.
+// Spark firmware interleaves background CPU activity associated with WiFi + Cloud activity with your code. 
+// Make sure none of your code delays or blocks for too long (like more than 5 seconds), or weird things can happen.
+void loop() {
+  digitalWrite(led, HIGH);   // Turn ON the LED pins
+  delay(1000);               // Wait for 1000mS = 1 second
+  digitalWrite(led, LOW);    // Turn OFF the LED pins
+  delay(1000);               // Wait for 1 second in off mode
+}
+
 /*
+
+int contIn = D0;
+int breakIn = D1; 
+
+
 void setup() {
     Spark.function('dripstatus', driptrue);
     
@@ -28,9 +60,8 @@ int driptrue(){
     //record a drip until the interrupt ends
     
 }
+
 */
-
-
 
 
 /*

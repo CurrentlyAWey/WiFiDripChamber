@@ -1,0 +1,28 @@
+Problem: Nurses spend 35% of the time on documentation and 20% on coordination. 
+Only 9% of the time is spend diagnosing patients. 
+In addition, nurses have to record data of patients manually and bring it back to the office for manual entry.
+(waste of time and less effective method)
+
+
+Customer: Hospitals and other healthcare professionals will find this product essential 
+in better allocating resources and eliminating inefficiencies within a hospital setting. 
+Additionally, this product will serve as a stronger tool for doctors and nurses to monitor and observe their patients.
+
+
+Product: The smart IV drip chamber contains the typical components of a drip chamber,
+but has additional parts to revolutionize the hospital setting. With the addition of a flow sensor to the IV drip chamber, 
+both the fluid level and the drip rate of the IV fluid can be accurately measured without a nurse. 
+These sensors will help to detect abnormalities within the drip chamber. 
+	
+The attached Spark Core will send this information to a central server, 
+which processes the data and detects anomalies in IV operation. When it senses an abnormality, 
+the server then sends a notification to nurses who are either in a central location, 
+or on their rounds and can receive notifications on a handheld device. With this, 
+nurses can immediately react to any issues with the IV drip chamber. Additionally, 
+the Spark Core can send data from the drip chamber to a patient’s electronic health 
+record for a more comprehensive look into their medical history.
+
+Progress: We are trying to buy some supplies such as medical appliances 
+that we need through ebay and start to make an actual product. Along with building the connected drip chamber,
+we are planning to visit several local hospitals in order to gather real potential customers’ 
+opinions and revise our ideas and the product, as well as appeal for possible funding.

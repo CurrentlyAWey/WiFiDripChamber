@@ -1,0 +1,23 @@
+Smart IV Drip Chamber
+
+Summary: 
+	Across the United States and in many parts of the world, hospitals use machines and other devices that check for and monitor the vitals of their patients. Nurses must currently roam around the hospital going from patient to make sure that each patient’s vitals are sound and that fluid levels are sufficient for the patient. As a result, hospitals are now making a strong shift toward a more connected healthcare environment using connected devices. The concept of a connected hospital is still in its infancy. Many of these technologies have been developed within the last 5-10 years. As hospitals move toward a more connected environment, they want low cost and efficient solutions that improves patient care.
+
+Problem: 
+Nurses spend 35% of the time on documentation and 20% on coordination. Only 9% of a nurse’s time is spent on actual personal care. In addition, nurses have to record data of patients manually and bring it back to the office for manual entry. Thus, this has led to an overworked staff and inefficiencies within the hospital setting. Specifically, for the IV drip chamber, levels and drip rate are monitored by nurses at regular intervals throughout the day. Sometimes fluid levels and other abnormalities are not detected immediately as a result of the current system. Thus, overlooking any issues(i.e low/high drip rate, low fluid level, oxygen entering blood stream) can  have serious implications for the patient.
+
+Aim: 
+We aim to both enhance healthcare productivity while also increasing the quality of care that patients receive. We can achieve this by implementing a connected IV drip chamber. 
+
+Customer: 
+While before we were mainly targeting hospitals and healthcare settings as our primary customers, we realized that much of the medical device industry is controlled by a few companies. These companies have their own requirements for the devices they provide to health care professionals. Therefore, it is vital that our product has a strong selling point to the medical device manufacturers and distributors.
+
+Product: 
+We have weighed several viable options for the development of our project. These included a pressure sensor, a laser-light sensor, and probes. We found that using the probes to monitor flow rate and fluid levels was the most viable since it would only require a simple design to implement the technology and the costs of creating a prototype would be significantly less than the other options.
+
+	We plan to attach the Spark Core to read information from the probes and send it to some sort of database(i.e. Electronic Health record). Nurses can then react to any abnormalities detected within the system.
+	
+Progress: 
+	We have began constructing the product by putting together a simple circuit to test the use of the probes. The breadboarded circuit was relatively successful in initial trial runs.
+	Going forward, we will continue to try and tailor the spark core toward serving our purpose of monitoring the fluid levels and drip rate in the IV drip chamber. We are going to continue to write our Sparkcore code in tandem with the construction of the hardware to achieve this.
+	Additionally, we are going to visit a hospital to better understand the demands of a hospital and get input from healthcare professionals. We are also going to talk with professionals within the industry to better understand the market and needs for the product. That way we can make the product both effective and sellable.

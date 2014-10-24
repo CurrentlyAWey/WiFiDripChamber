@@ -7,6 +7,8 @@ EID 2014 Project, Professor Petrillo, WiFi Connected Drip Chamber
 +++++++++++++++
 +++  FILES  +++
 +++++++++++++++
+
+
 Links and General Info.txt contains external
 links to external distributors, google docs, 
 contact information, etc. 
@@ -21,6 +23,7 @@ is contained in a block comment at the end of the file.
 +++++++++++++++
 +++ FOLDERS +++
 +++++++++++++++
+
 
 Contained in the Progress Report folder are 2 status updates
 

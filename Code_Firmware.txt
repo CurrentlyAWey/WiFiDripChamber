@@ -1,38 +1,12 @@
-// Testing compiler; this program SHOULD compile as blinker, and just have our program behind it as a block comment
-// HOWEVER It doesn't compile properly when we add COMMENTS.
-
-//Thanks based Spark
-
-
-// Define the pins we're going to call pinMode on
-int led = D0;  // You'll need to wire an LED to this one to see it blink.
-
-// This routine runs only once upon reset
-void setup() {
-  // Initialize D0 + D7 pin as output
-  // It's important you do this here, inside the setup() function rather than outside it or in the loop function.
-  pinMode(led, OUTPUT);
-  
-}
-
-// This routine gets called repeatedly, like once every 5-15 milliseconds.
-// Spark firmware interleaves background CPU activity associated with WiFi + Cloud activity with your code. 
-// Make sure none of your code delays or blocks for too long (like more than 5 seconds), or weird things can happen.
-void loop() {
-  digitalWrite(led, HIGH);   // Turn ON the LED pins
-  delay(1000);               // Wait for 1000mS = 1 second
-  digitalWrite(led, LOW);    // Turn OFF the LED pins
-  delay(1000);               // Wait for 1 second in off mode
-}
-
-/*
-
+int driptrue();
+int dripstatus = 0;
 int contIn = D0;
 int breakIn = D1; 
 
 
 void setup() {
-    Spark.function('dripstatus', driptrue);
+
+    Spark.variable("dripstatus", &dripstatus, INT);
     
     pinMode(contIn, INPUT);
     pinMode(breakIn, INPUT);
@@ -43,43 +17,24 @@ void setup() {
 
 
 void loop() {
-    noInterrupts();
-        //monitor
         
-    Interrupts();
-        attachInterrupt(D1, driptrue, RISING);
-    
-    
+    if(digitalRead(D1) == LOW)
+        dripstatus = false;
+    else
+        dripstatus = true;
     
 
 }
 
+/* 
+PROBLEMS: AppScript doesn't know when to search, or PULL from the spark core and "see" that it's dripping.
+		Also, if the AppScript pulls too frequently, it may register a single drop twice.
+		
+		Possible solutions would be to record the no. of drips over a 10, 30, or 60 second interval, and 
+		storing the drips per minute in a Spark.variable "dripsPerMinute"
+		This variable can then be accessed by the web, in resolutions of 10, 30, or 60 seconds, with 
+		less accuracy for "higher" resolutions.
 
-int driptrue(){
-    drop = digitalRead(A0);
-    //record a drip until the interrupt ends
-    
-}
-
-*/
-
-
-/*
-
-bool dropComplete = meter(D0); //meter measures the current in the circuit and evaluates as true when the current is "HIGH" 
-                                  // attachInterrupt(D0, fxn(), RISING)
-
-
-
-setTImer (5ms) //loop every 5 ms
-{
-    if (dropComplete == true)
-    {
-        while (dropComplete == true)    //dropComplete is true when the drop is in between the probes, completing the circuit.
-        {
-            //UPLOAD SHIT TO THE CLOOOOUD;
-        }
-    }
-
-
+		Please include other possible solutions or include implementations in a separate file.
+		
 */

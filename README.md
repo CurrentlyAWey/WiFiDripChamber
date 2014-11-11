@@ -10,15 +10,25 @@ EID 2014 Project, Professor Petrillo, WiFi Connected Drip Chamber
 
 
 Links and General Info.txt contains external
-links to external distributors, google docs, 
-contact information, etc. 
+	links to external distributors, google docs, 
+	contact information, etc. 
 
 Supplies.txt contains a supply list that will be formalized into 
-an excel spreadsheet for price optimization in the future.
+	an excel spreadsheet for price optimization in the future.
 
 Code_Firmware.txt contains attempts to write code and troubleshoot 
-the Spark.io IDE. The pseudo code/ logic for our project 
-is contained in a block comment at the end of the file.
+	the Spark.io IDE. 
+
+Code_Firmware_SerialOut_Timer.txt contains a version of code that will update an LED Output 
+	on pin D0 to reflect when the drop is completing the circuit, and counts the number of
+	drops for 60 seconds. 
+	It also prints out the number of drops per minute to a serial port. This can be used to 
+	troubleshoot, and can later be revised by simply keeping one value of count as the incrementing 
+	value the machine can "play" with, and storing that value into a Spark.variable at the end of each
+	minute, for the internet to access. Thus, the value retrieved on the internet will lag behind 
+	by one minute. This can be adjusted.
+
+
 
 +++++++++++++++
 +++ FOLDERS +++

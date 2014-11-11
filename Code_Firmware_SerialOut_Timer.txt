@@ -5,10 +5,11 @@ unsigned int start=0;
 int val=LOW;
 int valold=LOW;
 int count = 0;
+int lastcount = 0;
 
 void setup() {
 
-    Spark.variable("DripsPerMinute", &valold, INT);
+    Spark.variable("DripsPerMinute", &lastcount, INT);
     
     pinMode(ledOut, OUTPUT);
     pinMode(breakIn, INPUT);
@@ -20,36 +21,32 @@ void setup() {
 
 void loop() {
     
- start = millis();		// take the start time
-  count = 0;		// reset counter
-  
+ start = millis(); // take the start time
+  count = 0; // reset counter
   // do the following loop for 60000ms = 1min
   while (millis()-start < 60000)
   {
-  
-	// check for overflow of millis()
-	if (start > millis()) 
-		{
-			start = millis();
-			count = 0;
-		}
-	val = digitalRead(D1);
-	if (val==LOW)
-		{
-			digitalWrite(D0, LOW);
-		}
+     // check for overflow of millis()
+     if (start > millis()) {
+       start = millis();
+       count = 0;
+     }
+    val = digitalRead(D1);
+    if (val==LOW)
+    {
+      digitalWrite(D0, LOW);
+    }
     else
-		{
-			digitalWrite(D0, HIGH);
-			if (val!= valold) 
-				{
-					count ++;
-					valold = val;
-				}
-		}
+    {
+      digitalWrite(D0, HIGH);
+      if (val!= valold) {
+        count ++;
+        valold = val;
+      }
+    }
   }
- 
- // 1 minute over. print conts
+  // 1 minute over. print conts
   Serial.print("Drips Per Minute : ");
   Serial.println(count,DEC);
-}     
+  lastcount = count;
+}    

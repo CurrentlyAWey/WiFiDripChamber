@@ -1,14 +1,22 @@
-int driptrue();
-int dripstatus = 0;
-int contIn = D0;
-int breakIn = D1; 
+char resultstr[64];
+int id=314159265;
 
+
+int ledOut = D0;
+int breakIn = D1;
+
+unsigned int start=0;
+int val=LOW;
+int valold=LOW;
+int count = 0;
+int lastcount = 0;
 
 void setup() {
 
-    Spark.variable("dripstatus", &dripstatus, INT);
+    Spark.variable("DripsPerMinute", &lastcount, INT);
+    Spark.variable("result", &resultstr, STRING); 
     
-    pinMode(contIn, INPUT);
+    pinMode(ledOut, OUTPUT);
     pinMode(breakIn, INPUT);
     
     
@@ -17,24 +25,38 @@ void setup() {
 
 
 void loop() {
-        
-    if(digitalRead(D1) == LOW)
-        dripstatus = false;
-    else
-        dripstatus = true;
     
+ start = millis(); // take the start time
+  count = 0; // reset counter
+  // do the following loop for 60000ms = 1min
+  while (millis()-start < 60000)
+  {
+     // check for overflow of millis()
+     if (start > millis()) {
+       start = millis();
+       count = 0;
+     }
+    val = digitalRead(D1);
+    if (val==LOW)
+    {
+      digitalWrite(D0, LOW);
+    }
+    else
+    {
+      digitalWrite(D0, HIGH);
+      if (val!= valold) {
+        count ++;
+        valold = val;
+      }
+    }
+  }
+  // 1 minute over. print conts
+  Serial.print("Drips Per Minute : ");
+  Serial.println(count,DEC);
+  lastcount = count;
 
-}
+   // format data as JSON
+    sprintf(resultstr, "{\"data1\":%d,\"data2\":%d}", id, lastcount); 
 
-/* 
-PROBLEMS: AppScript doesn't know when to search, or PULL from the spark core and "see" that it's dripping.
-		Also, if the AppScript pulls too frequently, it may register a single drop twice.
-		
-		Possible solutions would be to record the no. of drips over a 10, 30, or 60 second interval, and 
-		storing the drips per minute in a Spark.variable "dripsPerMinute"
-		This variable can then be accessed by the web, in resolutions of 10, 30, or 60 seconds, with 
-		less accuracy for "higher" resolutions.
-
-		Please include other possible solutions or include implementations in a separate file.
-		
-*/
+  
+}    

@@ -1,46 +1,40 @@
+char resultstr[64];
+char levstr[64];
+int id=314159265;
 
-serialoutcounter.ino  
 
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
+int ledOut = D0;
+int breakIn = D1;
+int breakLev = D2;
+int ledLev = D3;
+
+unsigned int start=0;
+int val=LOW;
+int valold=LOW;
+int count = 0;
+int lastcount = 0;
+
+void setup() {
+
+    Spark.variable("DripsPerMinute", &lastcount, INT);
+    Spark.variable("result", &resultstr, STRING); 
+    Spark.variable("level", &levstr, STRING);
+    
+    pinMode(ledOut, OUTPUT);
+    pinMode(ledLev, OUTPUT);
+    pinMode(breakIn, INPUT);
+    pinMode(breakLev, INPUT);
+    
+}
+
+
+void loop() {
+    
+ start = millis(); // take the start time
+  count = 0; // reset counter
+  // do the following loop for 60000ms = 1min
+  while (millis()-start < 60000)
+  {
      // check for overflow of millis()
      if (start > millis()) {
        start = millis();
@@ -75,8 +69,9 @@ serialoutcounter.ino
   Serial.print("Drips Per Minute : ");
   Serial.println(count,DEC);
   lastcount = count;
+
    // format data as JSON
     sprintf(resultstr, "{\"data1\":%d,\"data2\":%d}", id, lastcount); 
+
   
 }    
-Code verified! Great work. 

@@ -1,0 +1,65 @@
+
+Arnold,
+
+My only interaction with HIPPA regulations is annual training on them, which must be be completed by those working in the health care industry.  Typically, introduction of of new medical products to the market does not need to be concerned with HIPPA regulations.
+
+Does your product collect patient information?  Are you conducting a clinical study that requires patient information?  If not, then I don't believe you need worry about HIPPA.
+
+Thank you,
+
+Ken
+
+On Mon, Nov 10, 2014 at 9:33 AM, Arnold Wey <Arnold_wey@yahoo.com> wrote:
+
+    Regarding HIPPA regulations regarding transmission of medical data over a wireless network, how should we secure the data to pass HIPPA?
+
+    Thanks,
+    Arnold Wey
+    On Nov 6, 2014 3:05 PM, Kenneth Pascale <kapascale@gmail.com> wrote:
+
+        Hello Arnold,
+
+        I apologize for the delay in getting back to you.  I'll try to answer your questions to the best of my ability.
+
+        All of the research and development I've done to date has been part a medical device firm.  We design, manufacture, and introduce new devices into the market for sale.  The need to secure funding for my work hasn't not been an issue.  However, one avenue to secure funding could be through venture capitalist firms that specialize in the medical device industry.
+
+        I can not answer your question about approaching potential investors because I've never had to do this.
+
+        Some medical equipment/supplies you can purchase directly over the internet.  For example, one popular supplier is Medline (http://www.medline.com/jump/category/x/cat1520035).  I would suggest trying to purchase from them.  B. Braun is also a large manufacturer of IV equipment, but I don't believe they have direct online sales.
+
+        I hope this is helpful to you.  My focus is in product development, not necessarily investor relations.  I work in areas such as conceptualization of ideas, prototyping, manufacturing, mechanical testing, design control (for regulatory approvals), and product launch.  These are all requirements of introducing new medical products.  I'd be happy to answer any other questions which you may have around these topics.
+
+        Sincerely,
+
+        Ken Pascale
+
+        On Tue, Oct 28, 2014 at 12:47 PM, Arnold Wey <arnold_wey@yahoo.com> wrote:
+
+            Hey, 
+            I'm Arnold, a member of the Drip Chamber group in Professor Petrillo's EID101 section. We have a few questions for you regarding Biomedical Engineering and getting our products to market, as well as securing donations (product or monetary) from interested parties.
+
+            We are under the impression that most of the research you did was under a firm, so funding was not necessarily an issue. Is that the case? How would you have secured additional funding, if necessary? 
+
+            How did you approach potential investors with your idea, and how did you find these people?
+
+            How/Who should I approach in the professional medical field to secure sample equipment? We're looking for an IV setup, so just the bag, a drip chamber, and the tubing for it, as well as additional dripchambers that we can use to create multiple prototypes at the same time, without tearing down previous prototypes.
+
+            We have some other questions regarding HIPAA, but we'll cross that bridge when we get there.
+
+            Thanks for your help and time,
+
+            Arnold Wey
+
+
+
+
+        -- 
+        Ken Pascale
+        kapascale@gmail.com
+
+
+
+
+-- 
+Ken Pascale
+kapascale@gmail.com

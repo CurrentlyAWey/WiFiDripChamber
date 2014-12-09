@@ -1,0 +1,133 @@
+var patientList =[];
+
+function main() {
+  createForm();
+  for(var i=0; i<1000000; i++)
+  {
+    checkResponses();
+    var collect =collectData();
+    collect.data
+    checkPatients();
+    delay(10000);
+  } 
+
+}
+/**
+ * Uses the Forms API to create a simple quiz.
+ * For more information on using the Forms API, see
+ * https://developers.google.com/apps-script/reference/forms
+ */
+function createForm() {
+  var title = 'Drip Chamber Recipient';
+  var description = 'Alerting  you of any concerns!';
+
+  var form = FormApp.create(title)
+      .setDescription(description)
+      .setConfirmationMessage('Thanks for responding!');
+
+  form.addTextItem()
+      .setTitle('Patient Name')
+      .setRequired(true);
+  
+  
+  form.addTextItem()
+      .setTitle('Patient ID')
+      .setRequired(true);
+
+  form.addTextItem()
+      .setTitle('Drip Rate Required for Patient')
+      .setRequired(true);
+
+  form.setDestination(FormApp.DestinationType.SPREADSHEET, '1ZcxWK26tRDZ9t6XacDbQjBoKNQNKZL7-Cwi3YQdvnTw');
+  Logger.log(form.getEditUrl());
+  Logger.log(form.getPublishedUrl());
+}
+
+function Patient(a,b,c) {
+  this.name = a;
+  this.ID=b;
+  this.rate=c;
+  this.getName = function() {return this.name;}
+  this.getID = function() { return this.ID;}
+  this.getRate=function(){return this.rate;}
+  this.newName = function(name2){name=name2;}  
+}
+
+function checkPatients(data) {
+  for(var i=0; i<patientList.length(); i++)
+    if(patientList[i].getID==data[0])
+    {
+      var patient =patientList[i];
+      var rate = patient.getRate();
+      var max = rate + .2;
+      var min = rate - .2;
+      var subject;
+      var message;
+      if((data[1]<min || data[1]>max) && data[2])
+      {
+        var num = data[1]-rate;
+        subject = "Drip Rate ERROR for Patient" + patient.getID;
+        message = "Patient" + patient.getName + "currently has a drip rate of" + data[1] + "which is" + num + "of typical drip rate";
+      }
+      else if(!data[2] && !(data[1]<min || data[1]>max))
+      {
+        subject = "IV Fluid Low for Patient" + patient.getID;
+        message = "Patient" + patient.getName + "has a low IV fluid level";
+      }
+      else if((data[1]<min || data[1]>max) && !data[2])
+      {
+        var num = data[1]-rate;
+         subject = "Drip Rate ERROR and low IV fluid for Patient" + patient.getID;
+        message = "Patient" + patient.getName + "currently has a drip rate of" + data[1] + "which is" + num + "of typical drip rate and has a low IV fluid level";
+      }
+        
+    MailApp.sendEmail("kvishnu396@gmail.com", subject, message);
+      }
+} 
+
+function checkResponses() {
+  var form = FormApp.getActiveForm();
+  var responses = form.getResponses();
+  for (var i = 0; i < responses.length; i++) {
+    var itemResponses = responses[i].getItemResponses();
+    var name = itemResponses[0];
+    var ID = itemResponses[1];
+    var rate = itemResponses[2];
+    var newPatient = new Patient(name, ID, rate);
+    patientList.push(newPatient);
+    /*
+    for (var j = 0; j < itemResponses.length; j++) {
+      var itemResponse = itemResponses[j];
+      if (itemResponse.getItem().getType() == FormApp.ItemType.SCALE) {
+        score += itemResponse.getResponse();
+      }
+    }
+    */
+  }
+}
+      
+function collectData() {
+  //var  sheet = SpreadsheetApp.getActiveSheet();
+
+  //var response = UrlFetchApp.fetch("https://api.spark.io/v1/devices/YOUR-DEVICE-ID/result?access_token=YOUR-ACCESS-TOKEN");
+
+  try {
+    var response = JSON.parse(response.getContentText()); // parse the JSON the Core API created
+    var result = unescape(response.result); // you'll need to unescape before your parse as JSON
+
+    try {
+      var p = JSON.parse(result); // parse the JSON you created
+      var d = new Date(); // time stamps are always good when taking readings
+  this.data = [p.data1,p.data2,p.data3];
+  this.getData = function() { return this.data;}
+        //sheet.appendRow([d, p.data1, p.data2, p.data3]); // append the date, data1, data2 to the sheet
+    } catch(e)
+    {
+      Logger.log("Unable to do second parse");
+    }
+  } catch(e)
+  {
+    Logger.log("Unable to returned JSON");
+  }
+}
+

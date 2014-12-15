@@ -57,12 +57,12 @@ void loop() {
     if (digitalRead(breakLev) == LOW)
     {
         digitalWrite(ledLev, HIGH);
-        sprintf(levstr, "{\"Fluid Level too low?\":%d}", "YES");
+        sprintf(levstr, "{\"Fluid Level too low?\":%d}", 1);
     }
     else
     {
         digitalWrite(ledLev, LOW);
-        sprintf(levstr, "{\"Fluid Level too low?\":%d}", "No");
+        sprintf(levstr, "{\"Fluid Level too low?\":%d}", 0);
     }
   }
   // 1 minute over. print conts

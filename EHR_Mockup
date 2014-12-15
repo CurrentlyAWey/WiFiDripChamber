@@ -1,0 +1,20 @@
+The EHR(Electronic Health record) is a system that many health care providers are moving toward in today's modern connected
+health care environment. This EHR which is a highly secured system enables doctors and nurses to access electronic health care
+records of their patients. If the IV drip chamber is implemented in a hospital setting, the EHR will contain a log of any issues
+or possible changes in the drip rate. 
+
+To mock the EHR, a google app form was used in its place. Using google app scripts this data, was then recorded and analyzed for
+any possible issues.
+
+Google APP Form
+
+IV Drip Chamber Recipient:
+
+Name:
+ID:
+Required Drip Rate:
+
+This information can then be used to identify the patient and their corresponding drip rate. If the drip rate becomes irregular 
+the EHR will note this and an additional message would be sent to the nurse/doctor caring for this patient.
+
+Link: https://docs.google.com/forms/d/1nadqnlqWZ2eHvNaQKu9YzTe4qvopkkPGtfBdCchfSvI/viewform

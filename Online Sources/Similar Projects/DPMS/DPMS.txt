@@ -1,0 +1,33 @@
+Drip Bag Monitoring System
+-Very similar project to our's, but far more extensive
+
+http://www.scribd.com/doc/3928068/Drip-Bag-Monitoring-System
+
+Summary: -identifies two problems
+		- incorrect IV dosage
+		- inefficient monitoring of these patients
+	- proposes two devices to automate dosage and monitoring
+
+Details: Communication type: -decided between Wifi, Zigbee, and Bluetooth
+	-chose Zigbee for its optimum range
+	-also cost less on energy consumption
+	-goes into the details of circuitry for inputting the sensor 		information into a chip that transmits this information over Zigbee
+	-explains the wireless protocol involved(could be useful if it were 	Wifi)
+	-we avoided this by using SparkCore(changing to Photon)
+
+	GUI:-creates a GUI that has all the information we would use
+		-Name
+		-Age
+		-Sex
+		-Medication Type
+		-Dosage
+		-Full Volume
+		-has graphs with current flow rate, view historical data
+	Measurement Device: -considered spring balances, load cells, and 		force sensors
+		-chose two Honeywell manufactured load cells b/c there were 		many specifications to choose from
+		-load cells measure the force applied, in this case gravity, 		and emit a proportional electric current
+
+Review: -incredibly helpful information
+	-though it chose completely different routes
+	-it provides useful tables for comparison and effectively explains 	the pros and cons many of the choices we have to make
+	-extensive lab report created by doctor with both engineering and 	medical experience, both of which we don't have

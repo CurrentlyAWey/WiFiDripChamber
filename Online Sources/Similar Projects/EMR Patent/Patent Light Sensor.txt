@@ -1,0 +1,18 @@
+Link to website
+http://www.google.com/patents/US20140283620
+
+Summary - a light sensor counts drops
+	- a source emits electromagnetic radiation
+	- a sensor on the other side detects the signal
+	- fluid refracts the light, interrupts the signal
+	- each interruption is counted as a drop of IV fluid
+	- must wait a certain lag time for both states and only count each 	drop once
+	- it also includes a user interface to deliver the information
+
+Review  - we decided against using a light sensor, such as this
+	- the probe we decided on is far cheaper to implement
+	- much easier to determine the drip rate
+	- light sensor may be more accurate, but costs more to implement 	effectively
+	-pros include; can be affixed to any IV and removed
+	-our's cannot because we insert metal probes into the tubing
+	-removing our sensor would leave holes

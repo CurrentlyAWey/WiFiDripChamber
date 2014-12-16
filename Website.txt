@@ -1,14 +1,15 @@
 URL : http://gordonmacshane.wix.com/wifidripchamber (Initial webpage address)
-  Images :
-    Logo :
-   Main Page Image : 
-   Instructions Image ("Does it work?") :
- Video :
- Content :
-    Home :
-    About :
-      Smart Drip Chamber :
-      How Does it Work? :
-    Contact :
+URL 2 : http://smartdripchamber.wix.com/wifidripchamber (new webpage address)
+  Images 
+    Logo 
+   Main Page Image  
+   Instructions Image ("Does it work?") 
+ Video 
+ Content 
+    Home 
+    About 
+      Smart Drip Chamber 
+      How Does it Work? 
+    Contact 
   
 

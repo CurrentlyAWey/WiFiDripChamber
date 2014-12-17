@@ -23,6 +23,8 @@ Medline
 http://www.wikinvest.com/stock/Medical_Action_Industries%20%28MDCI%29/Competition
 
 DEVICE ID: 51ff71065067545759290187
+access_token=bb67ab0127cb105e07ca29836db40ede3f706e65
+DEVICE URL: https://api.spark.io/v1/devices/51ff71065067545759290187/result?access_token=bb67ab0127cb105e07ca29836db40ede3f706e65
 
 Website link: http://gordonmacshane.wix.com/wifidripchamber
 

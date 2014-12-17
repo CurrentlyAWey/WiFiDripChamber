@@ -11,7 +11,7 @@ EID 2014 Project, Professor Petrillo, WiFi Connected Drip Chamber
 
 Links and General Info.txt contains external
 	links to external distributors, google docs, 
-	contact information, etc. 
+	contact information, etc. Includes Device Access token, Device ID, etc 
 
 Supplies.txt contains a supply list that will be formalized into 
 	an excel spreadsheet for price optimization in the future.
@@ -28,14 +28,14 @@ Code_Firmware_SerialOut_Timer.txt contains a version of code that will update an
 	minute, for the internet to access. Thus, the value retrieved on the internet will lag behind 
 	by one minute. This can be adjusted.
 
-
+CostsSpreadsheet is a partslist detailing costs.
 
 +++++++++++++++
 +++ FOLDERS +++
 +++++++++++++++
 
 
-Contained in the Progress Report folder are 2 status updates
+Contained in the Progress Report folder are status updates
 
 Contained in the Pictures and Documentation folder are photos 
 of prototypes and parts.
@@ -43,4 +43,8 @@ of prototypes and parts.
 Contained in the Public Relations folder are presentation files
 we use for pitching ideas to investors and business professionals, 
 including pptx, ppsx, and scripts.
+
+Online Sources is a Bibliography of sorts.
+
+
 

@@ -46,5 +46,6 @@ including pptx, ppsx, and scripts.
 
 Online Sources is a Bibliography of sorts.
 
-
-
+Link to Kickstarter: https://www.kickstarter.com/projects/1343639538/1460072307?token=864f7c7a
+Link to Website: http://smartdripchamber.wix.com/wifidripchamber
+Link to Youtube Video: http://youtu.be/BE1DqKXYkKc
